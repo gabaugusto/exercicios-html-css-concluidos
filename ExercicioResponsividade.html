@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex & Responsividade</title>
+    <style>
+
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+     
+        /* Estilizações CSS */
+       
+       
+        /* 
+            https://www.w3schools.com/
+            https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+            
+        */
+
+        * {
+            font-family: monospace;
+        }
+
+        .box {
+            background: #335599;
+            width: 200px;
+            height: 200px;
+            
+            min-width: 20vw;
+            min-height: 20vh;
+            
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: .5s;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.1); /* zoom */
+            box-shadow: -10px 10px 20px #0000004c; /* sombra */
+            border-radius: 10px;
+        }
+
+         /* ::-webkit-scrollbar {
+            background: red;
+            width: 10px;
+        }
+ 
+        ::-webkit-scrollbar-button {
+            background: blue;
+        } */
+
+        .yellow {
+            background: yellow;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .blue {
+            background: blue;
+        }
+        
+        @media screen and (max-width: 768px){
+            .box {
+               width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box yellow">
+        <span>
+            Amarela
+        </span>
+    </div>
+    <div class="box red">
+        <span>
+            Vermelha
+        </span>
+    </div>
+    <div class="box green">
+        <span>
+            Verde
+        </span>
+    </div>
+    <div class="box blue">
+        <span>
+            Azul
+        </span>
+    </div>
+    
+</body>
+</html>
